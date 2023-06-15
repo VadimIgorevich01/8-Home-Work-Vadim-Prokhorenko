@@ -234,4 +234,34 @@ int[,] Create2DimArr(string infoRow, string infoColumn, string allowedChars)
 // // _______________________________________________
 
 // Task5__________________________________________
+// Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.
 ShowTaskNumber(5);
+int [,] matrix4x4 = new int [4, 4];
+int increment = 0;
+for (int s = 0; s < matrix4x4.GetLength(1); s++)
+{
+    matrix4x4 [0, s] = increment++;
+}
+for (int d = 1; d < matrix4x4.GetLength(0); d++)
+{
+    matrix4x4 [d, 3] = increment++;
+}
+for (int f = matrix4x4.GetLength(1) - 2; f >= 0; f--)
+{
+    matrix4x4 [3, f] = increment++;
+}
+for (int g = matrix4x4.GetLength(0) - 2; g >= 1; g--)
+{
+    matrix4x4 [g, 0] = increment++;
+}
+for (int h = 1; h < matrix4x4.GetLength(1) - 1; h++)
+{
+    matrix4x4 [1, h] = increment++;
+}
+for (int k = matrix4x4.GetLength(1) - 2; k >= 1; k--)
+{
+    matrix4x4 [2, k] = increment++;
+}
+Show2DimArray(matrix4x4, "Наш спиральный массив");
+
+
