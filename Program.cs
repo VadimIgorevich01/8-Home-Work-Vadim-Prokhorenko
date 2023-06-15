@@ -167,34 +167,71 @@ int[,] Create2DimArr(string infoRow, string infoColumn, string allowedChars)
 // Console.WriteLine($"Строка под номером {indexOfminValue + 1} с наименьшей суммой элементов");
 // // ________________________________________
 
-// Task3___________________________________
-// Задача 58: Задайте две матрицы. Напишите программу, 
-// которая будет находить произведение двух матриц.
-ShowTaskNumber(3);
-int [,] emptyMatrix1 = Create2DimArr ("Введите количество строк от 2", "Введите количество столбцов от 2",
-                                    "23456789");
-int columnOfMatrix2 = GetCheckedNumber ("Введите количество столбцов от 2 для второй матрицы",
-                                    "23456789");
-int [,] emptyMatrix2 = new int [emptyMatrix1.GetLength(1), columnOfMatrix2];
-int [,] filledMatrix1 = FillIntMatrix (emptyMatrix1, 0, 9);
-int [,] filledMatrix2 = FillIntMatrix (emptyMatrix2, 0, 9);
-int [,] productOfTwoMatrix = new int [filledMatrix1.GetLength(0), filledMatrix2.GetLength(1)];
-int multiplicationSum = 0;
-for (int t = 0; t < productOfTwoMatrix.GetLength(0); t++)
-{
-    for (int y = 0; y < productOfTwoMatrix.GetLength(1); y++)
-    {
-        for (int u = 0; u < filledMatrix1.GetLength(1); u++)
-        {
-            multiplicationSum += (filledMatrix1[t, u] * filledMatrix2 [u, y]);
-        } 
-        productOfTwoMatrix [t, y] = multiplicationSum;
-        multiplicationSum = 0;
-    }
-}
-Show2DimArray (productOfTwoMatrix, "\nНиже наше произведение двух матриц");
-// ________________________________________________
+// // Task3___________________________________
+// // Задача 58: Задайте две матрицы. Напишите программу, 
+// // которая будет находить произведение двух матриц.
+// ShowTaskNumber(3);
+// int [,] emptyMatrix1 = Create2DimArr ("Введите количество строк от 2", "Введите количество столбцов от 2",
+//                                     "23456789");
+// int columnOfMatrix2 = GetCheckedNumber ("Введите количество столбцов от 2 для второй матрицы",
+//                                     "23456789");
+// int [,] emptyMatrix2 = new int [emptyMatrix1.GetLength(1), columnOfMatrix2];
+// int [,] filledMatrix1 = FillIntMatrix (emptyMatrix1, 0, 9);
+// int [,] filledMatrix2 = FillIntMatrix (emptyMatrix2, 0, 9);
+// int [,] productOfTwoMatrix = new int [filledMatrix1.GetLength(0), filledMatrix2.GetLength(1)];
+// int multiplicationSum = 0;
+// for (int t = 0; t < productOfTwoMatrix.GetLength(0); t++)
+// {
+//     for (int y = 0; y < productOfTwoMatrix.GetLength(1); y++)
+//     {
+//         for (int u = 0; u < filledMatrix1.GetLength(1); u++)
+//         {
+//             multiplicationSum += (filledMatrix1[t, u] * filledMatrix2 [u, y]);
+//         } 
+//         productOfTwoMatrix [t, y] = multiplicationSum;
+//         multiplicationSum = 0;
+//     }
+// }
+// Show2DimArray (productOfTwoMatrix, "\nНиже наше произведение двух матриц");
+// // ________________________________________________
 
-// Task4___________________________________________
-// Задача 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. 
-// Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
+// // Task4___________________________________________
+// // Задача 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. 
+// // Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
+// ShowTaskNumber(4);
+// int [,,] array3Dimension = new int [2, 2, 2];
+// int maxNumberOfValues = array3Dimension.GetLength(0) * array3Dimension.GetLength(1) * 
+//                                                         array3Dimension.GetLength(2);
+// int numberToBePut = 0;
+// int [] reservedNumbers = new int [maxNumberOfValues];
+// int timesChecked = 0;
+// int index = 0;
+// for (int o = 0; o < array3Dimension.GetLength(0); o++)
+// {
+//     for (int p = 0; p < array3Dimension.GetLength(1); p++)
+//     {
+//         for (int a = 0; a < array3Dimension.GetLength(2); a++)
+//         {
+//             numberToBePut = new Random().Next(10, 100);
+//             while (timesChecked != reservedNumbers.Length)
+//             {
+//                 if (reservedNumbers[timesChecked] == numberToBePut)
+//                 {
+//                     numberToBePut = new Random().Next(10, 100);
+//                     timesChecked = - 1;
+//                 }
+//                 timesChecked++;
+//             }
+//             array3Dimension [o, p, a] = numberToBePut;
+//             reservedNumbers [index] = numberToBePut;
+//             index++;
+//             timesChecked = 0;
+//             Console.Write ($"{array3Dimension [o, p, a]}({o},{p},{a}) ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+// // _______________________________________________
+
+// Task5__________________________________________
+ShowTaskNumber(5);
