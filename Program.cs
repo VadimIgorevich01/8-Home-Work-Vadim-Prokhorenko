@@ -110,9 +110,6 @@ int[,] fullArrTwoDimenTsk1 = FillIntMatrix(emptyArrayTwoDimensionalTask1, -9, 9)
 int maxValue = -1;
 int indexOfLastColumn = fullArrTwoDimenTsk1.GetLength(1) - 1;
 int j = 1;
-
-
-
 for (int q = 0; q < fullArrTwoDimenTsk1.GetLength(0); q++)
 {
     for (int i = 0; i < (fullArrTwoDimenTsk1.GetLength(1) - 1); i++)
@@ -131,7 +128,6 @@ for (int q = 0; q < fullArrTwoDimenTsk1.GetLength(0); q++)
     }
     j = 1;
 }
-
 Show2DimArray(fullArrTwoDimenTsk1, "Ниже наш упорядоченный массив:");
 // ________________________________________________________
 
